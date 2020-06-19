@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le jeu des drapeaux</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <span>Niveau :</span><span id="niveau">1/7</span></span>
+        <span>Nb Clics : <span id="nbClicks">0</span></span>
+        <span>Temps : <span id="timer">00:00</span></span>
+    </nav>
+    <div class="container-fluid" id="container">
+    <span class="row titre">Drapeau de&nbsp;<span id="titre"></span></span>
+        <div class="row" id="drapeaux">
+            <div id="0" class="col-4 bleu" value="0"></div>
+            <div id="1" class="col-4 bleu milieu" value="0"></div>
+            <div id="2" class="col-4 bleu" value="0"></div>
+        </div>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4 text-center">
+                <button class="btn btn-warning">Replay</button>
+                <button id="boutton" class="btn btn-success" data-toggle="modal" data-target="#exampleModalScrollable">
+                    Valider</button>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalScrollableTitle">Niveau réussi</h5>
+                </div>
+                <div class="modal-body">
+                    <h1 class="col-8 offset-3" id="bravo"></h1>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Continuer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
